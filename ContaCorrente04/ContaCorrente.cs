@@ -8,15 +8,18 @@ namespace ContaCorrente04
         
        
         public int Agencia { get; set; };
+
         public int Conta { get; set; };
-        private double _saldo;
-        //pode ser acessado somente nesse escopo 
-        // _saldo " _ " no inicio do nome da variável para definir que é privado
+
 
         public Cliente Titular { get; set; }
         // simplificação do método abaixo,
         // não precisa abrir as chaves já que não existe verificação no método 
         // classe cliente no namespace ContaConrrente03
+
+        private double _saldo;
+        //pode ser acessado somente nesse escopo 
+        // _saldo " _ " no inicio do nome da variável para definir que é privado
 
         public double Saldo
         {
@@ -39,28 +42,21 @@ namespace ContaCorrente04
             }
         }
 
-       /*
-        * public void SetSaldo(double saldo)
-        * {
-        *    if(saldo < 0)
-        *    {
-        *       return;
-        *        // return no método void não retorna nada apenas para de executar o método;
-        *    }
-        *    else
-        *    {
-        *        this.saldo = saldo;
-        *        //aqui nesse escopo exixte o saldo do escopo e o saldo da classe;
-        *    }
-        * }
+        private static int TotalContasCriadas { get; private set; };
+        //static é uma caracteristica estática da classe;
+        //private set : privado para impossibilitar modificação externa
 
 
-        * public doulbe GetSaldo()
-        * {
-        *    return saldo;
-        *    // dentro deste escopo o único saldo que existe é o private double saldo.
-        * }
-        */
+        public ContaCorrente(int agencia, int conta)
+            //Construtor da Classe ContaCorrente (Agencia e Conta)
+        {
+            Agencia = Agencia;
+            Numero = numero;
+
+            ContaCorrente.TotalContasCriadas++;
+            //incrementa o total de contascriadas
+        }
+
 
         public bool Sacar(double valor)
         //função de verificação para sacar saldo
@@ -104,5 +100,27 @@ namespace ContaCorrente04
             }
 
         }
+           /*
+    * public void SetSaldo(double saldo)
+    * {
+    *    if(saldo < 0)
+    *    {
+    *       return;
+    *        // return no método void não retorna nada apenas para de executar o método;
+    *    }
+    *    else
+    *    {
+    *        this.saldo = saldo;
+    *        //aqui nesse escopo existe o saldo do escopo e o saldo da classe;
+    *    }
+    * }
+
+
+    * public double GetSaldo()
+    * {
+    *    return saldo;
+    *    // dentro deste escopo o único saldo que existe é o private double saldo.
+    * }
+    */
     }
 }
