@@ -10,7 +10,7 @@ namespace Bank.Funcionario
     public class Diretor : Funcionario
         //cria diretor que herda funcionario
     {
-        public Diretor(double salario, string cpf) : base(10000, cpf)
+        public Diretor(string cpf) : base(10000, cpf)
             //construtor herda da classe base
             // construtor herda argumento cpf da classe 
         {
@@ -28,8 +28,9 @@ namespace Bank.Funcionario
             // se usa a palavra virtual na classe mãe e override na classe filho
 
         {
-            return Salario + base.GetBonificacao();
-                   // base.GetBonificacao() = referencia a classe Base(mãe)
+            return Salario * 0.5;
+            // return Salario + base.GetBonificacao();
+            // base.GetBonificacao() = referencia a classe Base(mãe)
         }
     }
 }
