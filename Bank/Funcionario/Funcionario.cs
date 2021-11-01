@@ -15,7 +15,7 @@ namespace Bank.Funcionario
         public string Nome { get; set; }
         public string CPF { get; private set; }
         public double Salario { get; protected set; }
-                //protected é possivel acessar da classe base e da classe hererditária
+        //protected é possivel acessar da classe base e da classe hererditária
 
         public Funcionario(double salario, string cpf)
                 //construtor da classe de total de funcionarios

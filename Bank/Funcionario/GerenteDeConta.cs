@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bank.Sistemas
 
 namespace Bank.Funcionario
 {
-    public class GerenteDeConta : Funcionario
+    public class GerenteDeConta : Autenticavel
     {
         public GerenteDeConta(string cpf) : base(5000, cpf)
         {

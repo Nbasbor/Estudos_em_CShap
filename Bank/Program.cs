@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Bank.Funcionario;
+using Bank.Sistemas;
 
 namespace Bank
 {
@@ -15,6 +16,19 @@ namespace Bank
             Console.ReadLine();
         }
 
+        //Sistemas de senha 
+        public static void UsarSistema()
+        {
+            SistemaInterno sistemaInterno = new SistemaInterno();
+
+            Diretor diretor = new Diretor("32145698701");
+            diretor.Nome = "Ana";
+            diretor.Senha = "123";
+
+            sistemaInterno.Logar(diretor, "123");
+        }
+
+        //Calculador de total gasto com bonificações
         public static void CalcularBonificacao()
             // Transformar em estático para ser possível utiliza-lo no Main
         {

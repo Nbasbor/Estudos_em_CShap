@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Bank;
+using Bank.Sistemas;
 
 namespace Bank.Funcionario
 {
-    public class Diretor : Funcionario
+    public class Diretor : Autenticavel
         //cria diretor que herda funcionario
     {
         public Diretor(string cpf) : base(10000, cpf)
@@ -17,6 +18,8 @@ namespace Bank.Funcionario
             
             Console.WriteLine("Criando Diretor");
         }
+
+  
 
         public override void AumentarSalario()
         {
