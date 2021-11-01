@@ -15,12 +15,15 @@ namespace Bank
         {
             _totalBonificacao += funcionario.GetBonificacao();
         }
-        public void Registrar(Diretor diretor)
-            // dois métodos com mesmo nome são válidos quando tem argumentos diferentes, exemplo diretor/funcionario
-            //um método que recebe várias cargas 
-        {
-            _totalBonificacao += diretor.GetBonificacao();
-        }
+        /* 
+         * public void Registrar(Diretor diretor)
+         *  // dois métodos com mesmo nome são válidos quando tem argumentos diferentes, exemplo diretor/funcionario
+         *  //um método que recebe várias cargas 
+         * {
+         *  _totalBonificacao += diretor.GetBonificacao();
+         *
+         * }
+         */
         public double GetTotalBonificacao()
         {
             return _totalBonificacao;
