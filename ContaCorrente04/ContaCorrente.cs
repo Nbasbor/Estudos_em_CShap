@@ -5,11 +5,22 @@ namespace ContaCorrente04
 {
     public class ContaCorrente
     {
-        
+        public static double TaxaOperacao { get; private set; }
        
-        public int Agencia { get; set; };
+        public int Agencia { get; private set; }
 
-        public int Conta { get; set; };
+        private readonly int _numero;
+        //privado e somente leitura 
+        public int Conta { 
+            get 
+            {
+                return _numero;
+                //retorna numero privado 
+            }
+           
+        }
+        //public int Conta { get; }
+                //Igual a versão de cima, porém simplificada
 
 
         public Cliente Titular { get; set; }
@@ -51,10 +62,30 @@ namespace ContaCorrente04
             //Construtor da Classe ContaCorrente (Agencia e Conta)
         {
             Agencia = Agencia;
-            Numero = numero;
+            _numero = conta;
 
             ContaCorrente.TotalContasCriadas++;
             //incrementa o total de contascriadas
+
+            try
+            //tentativa de execução do código
+            {
+                TaxaOperacao = 30 / TotalContasCriadas;
+                //calculo da taxa de operação
+                Console.WriteLine("A taxa de operações é: " + TaxaOperacao);
+            }
+            catch(DivideByZeroException e)
+            //pega a excessão (erro) e realiza uma ação
+            {
+                Console.WriteLine("Não é possível dividir por 0");
+                Console.WriteLine(e.Message);
+                //mensagem do erro
+                Console.WriteLine(e.StackTrace);
+                //rota do erro 
+                throw;
+                //throw passa a exceção a diante
+            }
+
         }
 
 

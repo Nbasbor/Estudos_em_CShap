@@ -13,6 +13,8 @@ namespace Bank
         static void Main(string[] args)
         {
             CalcularBonificacao();
+            //ao chamar um método dentro do método main é criado um empilhamento,
+            //no qual o método principal agora é o calcularBonificação
             Console.ReadLine();
         }
 
