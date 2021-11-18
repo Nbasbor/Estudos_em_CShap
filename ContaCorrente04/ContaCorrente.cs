@@ -64,20 +64,17 @@ namespace ContaCorrente04
             if (agencia <= 0 )
             {
                  
-                throw new ArgumentException("O argumento da agência deve ser maiores que 0.");
-                //lança uma nova excessão 
+                throw new ArgumentException("O argumento da agência deve ser maiores que 0.", nameof(agencia));
+                //lança uma nova excessão do tipo argumento com o parametro definido agencia
+                //nameof() se referen ao nome do parametro
                 //Terminar as frases com a pontuação correta é uma boa pratica
             }
             else if (conta <= 0 )
             {
-                throw new ArgumentException("O argumento da conta deve ser maiores que 0.");
-                //lança uma nova excessão 
+                throw new ArgumentException("O argumento da conta deve ser maiores que 0.", nameof(conta));
+                //lança uma nova excessão do tipo argumento com o parametro definido "conta"
             }
-            else if (agencia <= 0 && conta <= 0)
-            {
-                throw new ArgumentException("Os argumentos da agencia e conta deve ser maiores que 0.");
-                //lança uma nova excessão 
-            }
+
             Agencia = agencia;
             _numero = conta;
 

@@ -25,9 +25,18 @@ namespace ContaCorrente04
             gabriela.CPF = "12345678910"
 
 
-            ContaCorrente conta = new ContaCorrente(863, 863452);
-            // agencia = 863, conta = 863452
-            
+            try
+            {
+                ContaCorrente conta = new ContaCorrente(863, 863452);
+                // agencia = 863, conta = 863452
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Argumento com problema: " + ex.ParamName);
+            }
+
+
+
 
             conta.Titular = gabriela;
             //conta.Agencia = 863;
