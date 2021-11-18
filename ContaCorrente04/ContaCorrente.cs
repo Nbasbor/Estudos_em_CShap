@@ -61,7 +61,24 @@ namespace ContaCorrente04
         public ContaCorrente(int agencia, int conta)
             //Construtor da Classe ContaCorrente (Agencia e Conta)
         {
-            Agencia = Agencia;
+            if (agencia <= 0 )
+            {
+                 
+                throw new ArgumentException("O argumento da agência deve ser maiores que 0.");
+                //lança uma nova excessão 
+                //Terminar as frases com a pontuação correta é uma boa pratica
+            }
+            else if (conta <= 0 )
+            {
+                throw new ArgumentException("O argumento da conta deve ser maiores que 0.");
+                //lança uma nova excessão 
+            }
+            else if (agencia <= 0 && conta <= 0)
+            {
+                throw new ArgumentException("Os argumentos da agencia e conta deve ser maiores que 0.");
+                //lança uma nova excessão 
+            }
+            Agencia = agencia;
             _numero = conta;
 
             ContaCorrente.TotalContasCriadas++;
@@ -74,13 +91,14 @@ namespace ContaCorrente04
                 //calculo da taxa de operação
                 Console.WriteLine("A taxa de operações é: " + TaxaOperacao);
             }
-            catch(DivideByZeroException e)
+            catch(DivideByZeroException ex)
             //pega a excessão (erro) e realiza uma ação
+            //ex nomenclatura convencional de erro
             {
                 Console.WriteLine("Não é possível dividir por 0");
-                Console.WriteLine(e.Message);
+                Console.WriteLine(ex.Message);
                 //mensagem do erro
-                Console.WriteLine(e.StackTrace);
+                Console.WriteLine(ex.StackTrace);
                 //rota do erro 
                 throw;
                 //throw passa a exceção a diante
