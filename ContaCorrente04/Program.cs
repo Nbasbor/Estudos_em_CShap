@@ -42,6 +42,10 @@ namespace ContaCorrente04
                 //Exibe a mensage padrão da exceção
                 Console.WriteLine("Exceção do tipo SaldoInsuficiente.");
             }
+            //finally
+            //{
+            //Sempre será realizado, tendo erro ou não!
+            //}
 
 
 
@@ -60,8 +64,9 @@ namespace ContaCorrente04
 
             contaGabriela.Transferir(100, contaRafael);
             Console.WriteLine($"Saldo de Rafael: {contaRafael.saldo}");
-
+ 
             Console.ReadLine();
         }
+
     }
 }
