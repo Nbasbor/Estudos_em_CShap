@@ -34,7 +34,14 @@ namespace ContaCorrente04
             {
                 Console.WriteLine("Argumento com problema: " + ex.ParamName);
             }
-
+            catch (SaldoInsuficienteException ex)
+            {
+                Console.WriteLine(ex.Saldo);
+                Console.WriteLine(ex.ValorSaque);
+                Console.WriteLine(ex.Message);
+                //Exibe a mensage padrão da exceção
+                Console.WriteLine("Exceção do tipo SaldoInsuficiente.");
+            }
 
 
 

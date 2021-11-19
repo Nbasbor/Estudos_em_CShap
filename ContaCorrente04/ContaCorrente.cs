@@ -104,20 +104,24 @@ namespace ContaCorrente04
         }
 
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         //função de verificação para sacar saldo
         // todo nome de função começa com letra maiuscula
         //Convenção da nomeação de verbo em infinitivo
         {
+            if(valor < 0)
+            {
+                throw new ArgumentException("Valor invalido para saque. ", nameof(valor));
+            }
             if (this._saldo < valor)
             //this.saldo faz verificação na propriedade saldo da própria classe
             {
-                return false;
+                throw new SaldoInsuficienteException();
             }
             else
             {
                 this._saldo -= valor;
-                return true;
+                
             }
 
         }
@@ -131,6 +135,10 @@ namespace ContaCorrente04
         public bool Transferir(double valor, ContaCorrente contaDestino)
         // tipo ContaCorrente variável contaDestino
         {
+            if (valor < 0)
+            {
+                throw new ArgumentException("Valor invalido para tranferência. ", nameof(valor));
+            }
             if (this._saldo < valor)
             {
                 return false;
@@ -160,6 +168,7 @@ namespace ContaCorrente04
     *        //aqui nesse escopo existe o saldo do escopo e o saldo da classe;
     *    }
     * }
+    * Ctrl+k+c comenta o códido
 
 
     * public double GetSaldo()
