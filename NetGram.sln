@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetGram", "NetGram\NetGram.csproj", "{21D2143E-D161-42D6-B957-AD9ABCC26946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netGram2", "netGram2\netGram2.csproj", "{DF5330F5-1C9E-4B3A-ACD8-F851A74EC36D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21D2143E-D161-42D6-B957-AD9ABCC26946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21D2143E-D161-42D6-B957-AD9ABCC26946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21D2143E-D161-42D6-B957-AD9ABCC26946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21D2143E-D161-42D6-B957-AD9ABCC26946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5330F5-1C9E-4B3A-ACD8-F851A74EC36D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5330F5-1C9E-4B3A-ACD8-F851A74EC36D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5330F5-1C9E-4B3A-ACD8-F851A74EC36D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5330F5-1C9E-4B3A-ACD8-F851A74EC36D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF3DA7B9-0056-461F-913F-F444B9A512E9}
+	EndGlobalSection
+EndGlobal

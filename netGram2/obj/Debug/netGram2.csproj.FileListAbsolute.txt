@@ -1,0 +1,6 @@
+C:\Users\simon\source\repos\NetGram\netGram2\bin\Debug\netGram2.exe.config
+C:\Users\simon\source\repos\NetGram\netGram2\bin\Debug\netGram2.exe
+C:\Users\simon\source\repos\NetGram\netGram2\bin\Debug\netGram2.pdb
+C:\Users\simon\source\repos\NetGram\netGram2\obj\Debug\netGram2.csproj.CoreCompileInputs.cache
+C:\Users\simon\source\repos\NetGram\netGram2\obj\Debug\netGram2.exe
+C:\Users\simon\source\repos\NetGram\netGram2\obj\Debug\netGram2.pdb
