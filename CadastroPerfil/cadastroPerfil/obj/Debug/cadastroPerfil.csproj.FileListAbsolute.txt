@@ -1,0 +1,14 @@
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\bin\Debug\cadastroPerfil.exe.config
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\bin\Debug\cadastroPerfil.exe
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\bin\Debug\cadastroPerfil.pdb
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.csproj.AssemblyReference.cache
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.csproj.SuggestedBindingRedirects.cache
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.frmEntrar.resources
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.FormLogin.resources
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.Properties.Resources.resources
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.csproj.GenerateResource.cache
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.csproj.CoreCompileInputs.cache
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.exe
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.pdb
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.FormPerfil.resources
+C:\CSharpAlura\cadastroPerfil\cadastroPerfil\obj\Debug\cadastroPerfil.FormPublicação.resources

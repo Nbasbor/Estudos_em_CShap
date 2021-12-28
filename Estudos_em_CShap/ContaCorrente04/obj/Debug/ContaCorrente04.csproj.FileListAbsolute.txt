@@ -1,0 +1,2 @@
+C:\Users\simon\Documents\Nanda\Dev\C#\Estudos\ContaCorrente\ContaCorrente\ContaCorrente04\obj\Debug\ContaCorrente04.csproj.CoreCompileInputs.cache
+C:\Users\simon\Documents\Nanda\Dev\C#\Estudos\ContaCorrente\ContaCorrente\ContaCorrente04\obj\Debug\ContaCorrente04.csproj.AssemblyReference.cache

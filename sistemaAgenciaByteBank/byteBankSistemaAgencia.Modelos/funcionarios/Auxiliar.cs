@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using byteBankSistemaAgencia.Modelos.Sistemas;
+
+namespace byteBankSistemaAgencia.Modelos.funcionarios
+{
+    public class Auxiliar : Funcionario
+    {
+        public Auxiliar(string cpf) : base(2000, cpf)
+        {
+            Console.WriteLine("Criando Auxiliar");
+        }
+
+        public override double GetBonificacao()
+        {
+            return Salario * 0.2;
+        }
+    }
+}
