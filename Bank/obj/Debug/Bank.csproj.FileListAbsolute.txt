@@ -1,2 +1,0 @@
-C:\Users\simon\Documents\Nanda\Dev\C#\Estudos\ContaCorrente\ContaCorrente\Bank\obj\Debug\Bank.csproj.AssemblyReference.cache
-C:\Users\simon\Documents\Nanda\Dev\C#\Estudos\ContaCorrente\ContaCorrente\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
