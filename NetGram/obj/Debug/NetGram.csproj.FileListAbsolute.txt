@@ -1,2 +1,0 @@
-C:\Users\simon\source\repos\NetGram\NetGram\obj\Debug\NetGram.csproj.AssemblyReference.cache
-C:\Users\simon\source\repos\NetGram\NetGram\obj\Debug\NetGram.csproj.CoreCompileInputs.cache
