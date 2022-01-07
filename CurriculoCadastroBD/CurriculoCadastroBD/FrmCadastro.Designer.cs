@@ -49,6 +49,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Nome
@@ -223,19 +224,30 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(128, 338);
+            this.btnCadastrar.Location = new System.Drawing.Point(16, 342);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(292, 58);
+            this.btnCadastrar.Size = new System.Drawing.Size(259, 45);
             this.btnCadastrar.TabIndex = 21;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(298, 342);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(259, 45);
+            this.btnVoltar.TabIndex = 22;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // FrmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 422);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label9);
@@ -287,5 +299,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

@@ -12,11 +12,26 @@ namespace CurriculoCadastroBD
 {
     public partial class FrmPerfil : Form
     {
+        
         public FrmPerfil()
         {
             InitializeComponent();
         }
 
 
+
+
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -11,3 +11,4 @@ C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadast
 C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.csproj.CoreCompileInputs.cache
 C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.exe
 C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.pdb
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.FrmPerfil.resources

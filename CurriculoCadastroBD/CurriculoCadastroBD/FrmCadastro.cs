@@ -12,6 +12,7 @@ namespace CurriculoCadastroBD
 {
     public partial class FrmCadastro : Form
     {
+        
         public FrmCadastro()
         {
             InitializeComponent();
@@ -43,6 +44,13 @@ namespace CurriculoCadastroBD
                 MessageBox.Show("Falha ao cadastrar cliente" + ex.Message);
             }
 
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
         }
     }
 }

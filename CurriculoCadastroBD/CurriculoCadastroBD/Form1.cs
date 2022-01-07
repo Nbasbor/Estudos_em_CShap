@@ -13,8 +13,8 @@ namespace CurriculoCadastroBD
    
     public partial class Form1 : Form
     {
-        FrmCadastro cadastro = new FrmCadastro();
-        FrmEntrar entrar = new FrmEntrar(); 
+        
+       
         public Form1()
         {
             InitializeComponent();
@@ -22,14 +22,21 @@ namespace CurriculoCadastroBD
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            FrmCadastro cadastro = new FrmCadastro();
             cadastro.Show();
             this.Hide();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            FrmEntrar entrar = new FrmEntrar();
             entrar.Show();
             this.Hide();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
