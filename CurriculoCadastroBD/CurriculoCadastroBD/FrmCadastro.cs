@@ -17,5 +17,32 @@ namespace CurriculoCadastroBD
             InitializeComponent();
         }
 
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Usuario user = new Usuario();   
+            UsuarioCurriculo userCurriculo = new UsuarioCurriculo();
+            int gravou;
+            user.Nome = txtNome.Text;
+            user.Email = txtEmail.Text;
+            user.CPF = txtCPF.Text; 
+            user.Profissao = txtProfissao.Text;
+            user.Area = txtArea.Text;
+            user.Estado = txtEstado.Text;
+            user.Nascionalidade = txtNascionalidade.Text;
+            user.Cidade = txtCidade.Text;
+            user.Senha = txtSenha.Text;
+            user.Endereco = txtEndereco.Text;
+            try
+            {
+                gravou = userCurriculo.CadastrarUsuarios(user);
+                MessageBox.Show("Usuario cadastrato com sucesso");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao cadastrar cliente" + ex.Message);
+            }
+
+        }
     }
 }

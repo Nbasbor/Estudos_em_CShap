@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNascionalidade = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Nome
@@ -153,12 +153,12 @@
             this.label5.Text = "Nacionalidade:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox7
+            // txtEstado
             // 
-            this.textBox7.Location = new System.Drawing.Point(232, 164);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(102, 26);
-            this.textBox7.TabIndex = 14;
+            this.txtEstado.Location = new System.Drawing.Point(232, 164);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(102, 26);
+            this.txtEstado.TabIndex = 14;
             // 
             // label6
             // 
@@ -221,28 +221,29 @@
             this.label9.Text = "Senha:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.Location = new System.Drawing.Point(128, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 58);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Location = new System.Drawing.Point(128, 338);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(292, 58);
+            this.btnCadastrar.TabIndex = 21;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // FrmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 422);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNascionalidade);
             this.Controls.Add(this.label5);
@@ -277,7 +278,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNascionalidade;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label label7;
@@ -285,6 +286,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

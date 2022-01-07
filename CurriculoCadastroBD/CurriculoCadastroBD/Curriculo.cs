@@ -23,7 +23,7 @@ namespace CurriculoCadastroBD
             con = new SqlConnection(strCon);
             try
             {
-                con.Open();
+                con.Open(); // tenta abrir o Banco de dados
             }
             catch (Exception ex)
             {

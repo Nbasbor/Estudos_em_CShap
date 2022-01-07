@@ -1,0 +1,13 @@
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\bin\Debug\CurriculoCadastroBD.exe.config
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\bin\Debug\CurriculoCadastroBD.exe
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\bin\Debug\CurriculoCadastroBD.pdb
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.csproj.AssemblyReference.cache
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.csproj.SuggestedBindingRedirects.cache
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.Form1.resources
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.FrmCadastro.resources
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.FrmEntrar.resources
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.Properties.Resources.resources
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.csproj.GenerateResource.cache
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.csproj.CoreCompileInputs.cache
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.exe
+C:\CSharpAlura\CurriculoCadastroBD\CurriculoCadastroBD\obj\Debug\CurriculoCadastroBD.pdb

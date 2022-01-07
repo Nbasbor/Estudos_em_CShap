@@ -15,7 +15,7 @@ namespace CurriculoCadastroBD
         public string CPF { get; set; }
         public string Profissao { get; set; }
         public string Area { get; set; }
-        public string Nacionalidade { get; set; }
+        public string Nascionalidade { get; set; }
         public string Estado { get; set; }
         public string Cidade { get; set; }
         public string Endereco { get; set; }
@@ -34,7 +34,7 @@ namespace CurriculoCadastroBD
             CPF = cpf;
             Profissao = profissao;
             Area = area;
-            Nacionalidade = nacionalidade;
+            Nascionalidade = nacionalidade;
             Estado = estado;
             Cidade = cidade;
             Endereco = endereco;
