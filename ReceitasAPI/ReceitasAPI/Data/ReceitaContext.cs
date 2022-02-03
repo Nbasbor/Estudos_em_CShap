@@ -12,7 +12,7 @@ namespace ReceitasAPI.Data
     public class ReceitaContext : DbContext //Contexto de comunicação com o banco de dados
     {
         public ReceitaContext(DbContextOptions<ReceitaContext> options) : base(options) 
-            //o Conrtutor recebe como parametro as opções do Contexto ReceitaContext 
+            //o Constutor recebe como parametro as opções do Contexto ReceitaContext 
         {
 
         }
