@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using ReceitasAPI.Data;
 using ReceitasAPI.Data.DTOs;
 using ReceitasAPI.Models;
-using System;
 
 
 namespace ReceitasAPI.Controllers
@@ -20,15 +20,21 @@ namespace ReceitasAPI.Controllers
         //Recupera dados pelo BD
         private ReceitaContext _context;
 
-        public ReceitaController(ReceitaContext context)
+        //Iniciar o AutoMapper
+        private IMapper _mapper;
+
+        public ReceitaController(ReceitaContext context, IMapper mapper)
         {
-            _context = context; 
+            //Incializando propriedades
+            _context = context;
+            _mapper = mapper;
         }
 
         /*------------ Para criar um recuro -----------*/
-        [HttpPost] 
+        [HttpPost]
         public IActionResult AdicionaReceita([FromBody] CreateReceitaDTOs receitaDTOs)//recebe filme tipo Filme 
-                                                               //FromBody quer dizer que vem do corpo da requisição
+                                                                                      //FromBody quer dizer que vem do corpo da requisição
+        
         {
             // if(!string.IsNullOrEmpty(receita.Nome))
             //receita.Id = id++;
@@ -45,21 +51,21 @@ namespace ReceitasAPI.Controllers
             };
 
             //adiciona ao contexto a receita
-            //_context.Receitas.Add(receita);
+            _context.Receitas.Add(receita);
 
 
             _context.SaveChanges();//Salva as alteração (adição ao Banco)
-            return CreatedAtAction(nameof(RecuperaReceitaPorId), new {Id = receita.Id}, receita);
-                                    //Mostra o Location para retornar o recurso (nome da action + id =  id da receita + object)
+            return CreatedAtAction(nameof(RecuperaReceitaPorId), new { Id = receita.Id }, receita);
+            //Mostra o Location para retornar o recurso (nome da action + id =  id da receita + object)
 
             Console.WriteLine(receita.Nome); //Garantia/verificação
         }
 
 
         /*------------ Retorna as receitas -----------*/
-        [HttpGet]  
+        [HttpGet]
         public IEnumerable<Receita> RecuperaReceitas()
-            //IEnumerable permite que o método não quebre caso mude algo na lista
+        //IEnumerable permite que o método não quebre caso mude algo na lista
         {
             //return receitas;
             return (_context.Receitas);
@@ -67,24 +73,24 @@ namespace ReceitasAPI.Controllers
 
 
         /*------------ Get retornará um id -----------*/
-        [HttpGet("{id}")] 
+        [HttpGet("{id}")]
         public IActionResult RecuperaReceitaPorId(int id)
-            //IActionResult retorno de ação
+        //IActionResult retorno de ação
         {
-            Receita receita =  _context.Receitas.FirstOrDefault(receita => receita.Id == id);
-                //retorna o primeiro elemento que encontrar ou default(null)
-                //no qual o elemento é um receita e o id da receita é igual ao id passado
+            Receita receita = _context.Receitas.FirstOrDefault(receita => receita.Id == id);
+            //retorna o primeiro elemento que encontrar ou default(null)
+            //no qual o elemento é um receita e o id da receita é igual ao id passado
 
             if (receita != null)
             {
-               //return Ok(receita);
-               return Ok(receita);
+                //return Ok(receita);
+                return Ok(receita);
             }
             else
             {
-               return NotFound();
-            }   
-            
+                return NotFound();
+            }
+
 
             /*foreach (Receita receita in receitas)
             *{
@@ -98,31 +104,39 @@ namespace ReceitasAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult AtualizaReceita(int id, [FromBody] Receita receitaAtualizado)// a partir do corpo da requisição receberá uma receita atualizada
+        public IActionResult AtualizaReceita(int id, [FromBody] UpdateReceitaDTOs receitaAtualizadoDTOs)// a partir do corpo da requisição receberá uma receita atualizada
         {
             Receita receita = _context.Receitas.FirstOrDefault(receita => receita.Id == id);
-            if(receita == null)
+            if (receita == null)
             {
                 return NotFound();
             }
             else
             {
-                receita.Nome = receitaAtualizado.Nome;   
-                receita.Porcao = receitaAtualizado.Porcao;  
-                receita.Ingredientes = receitaAtualizado.Ingredientes;
-                receita.Preparo = receitaAtualizado.Preparo;  
-                receita.Tipo = receitaAtualizado.Tipo;
+                //Transforma receitaAtualizasDTOs em uma receita
+                _mapper.Map(receitaAtualizadoDTOs, receita);
+
                 _context.SaveChanges();
                 return NoContent();//Boas práticas de retorno de atualização
             }
+
+
+
+
+            //Converte em UpdateReceitaDTOs uma receita utilizando o AutoMapper
+            //_mapper.Map<receitaAtualizadoDTOs>(receita);
+
+            //Transforma receitaAtualizasDTOs em uma receita
+
+
         }
 
-        [HttpDelete("{id")]
+        [HttpDelete("{id}")]
         public IActionResult DeletaReceita(int id)
         {
             Receita receita = _context.Receitas.FirstOrDefault(receita => receita.Id == id);
             {
-                if(receita == null)
+                if (receita == null)
                 {
                     return NotFound();
                 }

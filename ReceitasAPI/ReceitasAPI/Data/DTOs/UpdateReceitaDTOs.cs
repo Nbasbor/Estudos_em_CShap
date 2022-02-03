@@ -2,11 +2,9 @@
 
 namespace ReceitasAPI.Data.DTOs
 {
-    public class CreateReceitaDTOs
+    public class UpdateReceitaDTOs
     {
-        [Key]
-        [Required]
-        public int Id { get; set; }
+
         [Required(ErrorMessage = "Campo Nome obrigatório")]
         public string Nome { get; set; }
         public string Tipo { get; set; }
