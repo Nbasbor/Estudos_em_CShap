@@ -83,5 +83,25 @@ namespace ReceitasAPI.Controllers
             *return null;
             */
         }
+
+        [HttpPut("{id}")]
+        public IActionResult AtualizaReceita(int id, [FromBody] Receita receitaAtualizado)// a partir do corpo da requisição receberá uma receita atualizada
+        {
+            Receita receita = _context.Receitas.FirstOrDefault(receita => receita.Id == id);
+            if(receita == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                receita.Nome = receitaAtualizado.Nome;  
+                receita.Porcao = receitaAtualizado.Porcao;
+                receita.Ingredientes = receitaAtualizado.Ingredientes;
+                receita.Preparo = receitaAtualizado.Preparo;
+                receita.Tipo = receitaAtualizado.Tipo;
+                _context.SaveChanges();
+                return NoContent();//Boas práticas de retorno de atualização
+            }
+        }
     }
 }
