@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Eq9qZ+F8BmG1HhZFb2OzoWqZ4m6avCJiVvfQE+MAb3CLmpL1YXvTUIqj+cUmYlKUS1pPlyPQMPyYTGzjm2sNgA==",
+  "dgSpecHash": "uKl/6UHCdg2uIvkeoXaL57Vqs1VQ3g7PuwjHILdCttNUPmET/lL4OEcvkBkCQRAKPbGPDWqWU27pZKKbN8Hjog==",
   "success": true,
   "projectFilePath": "C:\\CSharpAlura\\ReceitasAPI\\ReceitasAPI\\ReceitasAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\a.bastida.borges\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\a.bastida.borges\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\a.bastida.borges\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\a.bastida.borges\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\a.bastida.borges\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\a.bastida.borges\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\a.bastida.borges\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\a.bastida.borges\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",

@@ -5,8 +5,14 @@ using ReceitasAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//Add AutoMapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());//Especificar onde será usado no código o automapper
+
+//Add string de connecção
 builder.Services.AddDbContext<ReceitaContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ReceitaConnection")));
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

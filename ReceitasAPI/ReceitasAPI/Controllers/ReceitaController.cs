@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ReceitasAPI.Data;
+using ReceitasAPI.Data.DTOs;
 using ReceitasAPI.Models;
 using System;
 
@@ -26,15 +27,27 @@ namespace ReceitasAPI.Controllers
 
         /*------------ Para criar um recuro -----------*/
         [HttpPost] 
-        public IActionResult AdicionaReceita([FromBody] Receita receita)//recebe filme tipo Filme 
+        public IActionResult AdicionaReceita([FromBody] CreateReceitaDTOs receitaDTOs)//recebe filme tipo Filme 
                                                                //FromBody quer dizer que vem do corpo da requisição
         {
             // if(!string.IsNullOrEmpty(receita.Nome))
             //receita.Id = id++;
             //receitas.Add(receita);//adiciona a receitas o parametro receita 
 
+            //Cria um objeto com as propeirdades de filme
+            Receita receita = new Receita
+            {
+                Nome = receitaDTOs.Nome,
+                Tipo = receitaDTOs.Tipo,
+                Porcao = receitaDTOs.Porcao,
+                Ingredientes = receitaDTOs.Ingredientes,
+                Preparo = receitaDTOs.Preparo
+            };
+
             //adiciona ao contexto a receita
-            _context.Receitas.Add(receita);
+            //_context.Receitas.Add(receita);
+
+
             _context.SaveChanges();//Salva as alteração (adição ao Banco)
             return CreatedAtAction(nameof(RecuperaReceitaPorId), new {Id = receita.Id}, receita);
                                     //Mostra o Location para retornar o recurso (nome da action + id =  id da receita + object)
@@ -94,10 +107,10 @@ namespace ReceitasAPI.Controllers
             }
             else
             {
-                receita.Nome = receitaAtualizado.Nome;  
-                receita.Porcao = receitaAtualizado.Porcao;
+                receita.Nome = receitaAtualizado.Nome;   
+                receita.Porcao = receitaAtualizado.Porcao;  
                 receita.Ingredientes = receitaAtualizado.Ingredientes;
-                receita.Preparo = receitaAtualizado.Preparo;
+                receita.Preparo = receitaAtualizado.Preparo;  
                 receita.Tipo = receitaAtualizado.Tipo;
                 _context.SaveChanges();
                 return NoContent();//Boas práticas de retorno de atualização
