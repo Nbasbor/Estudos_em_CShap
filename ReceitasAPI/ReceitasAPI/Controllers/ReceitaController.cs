@@ -103,5 +103,21 @@ namespace ReceitasAPI.Controllers
                 return NoContent();//Boas práticas de retorno de atualização
             }
         }
+
+        [HttpDelete("{id")]
+        public IActionResult DeletaReceita(int id)
+        {
+            Receita receita = _context.Receitas.FirstOrDefault(receita => receita.Id == id);
+            {
+                if(receita == null)
+                {
+                    return NotFound();
+                }
+                _context.Remove(receita);//Delete Receita
+                _context.SaveChanges();
+                return NoContent();
+
+            }
+        }
     }
 }
