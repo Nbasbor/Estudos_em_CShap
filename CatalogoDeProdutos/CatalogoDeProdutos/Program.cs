@@ -6,10 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-IServiceProvider serviceProvider = (IServiceProvider)builder.Services; //Adiciona o IServiceProvider
+//IServiceProvider serviceProvider = builder.Services; 
 var app = builder.Build();
 
-IServiceProvider service = app.Services;
+IServiceProvider serviceProvider = app.Services; //Adiciona o IServiceProvider
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -19,8 +19,10 @@ if (!app.Environment.IsDevelopment())
 }
 void ConfigureServices(IServiceCollection services)
 {
-    services.AddTransient<ICatalogo, Catalogo>();//Cria um serviço
-    services.AddTransient<IRelatorios, Relatorios>();   
+    // services.AddTransient<ICatalogo, Catalogo>();//Cria um serviço transitorios
+    // services.AddTransient<IRelatorios, Relatorios>();   
+    services.AddScoped<ICatalogo, Catalogo>();//Cria um serviço com escopo
+    services.AddScoped<IRelatorios, Relatorios>();
 }
 
 app.UseHttpsRedirection();
