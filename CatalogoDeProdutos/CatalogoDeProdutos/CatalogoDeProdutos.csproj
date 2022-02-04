@@ -6,4 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Catalogo.cs" />
+    <Compile Remove="ICatalogo.cs" />
+    <Compile Remove="IRelatorios.cs" />
+    <Compile Remove="Relatorios.cs" />
+  </ItemGroup>
+
 </Project>
