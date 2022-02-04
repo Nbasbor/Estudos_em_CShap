@@ -23,6 +23,7 @@ void ConfigureServices(IServiceCollection services)
     // services.AddTransient<IRelatorios, Relatorios>();   
     services.AddScoped<ICatalogo, Catalogo>();//Cria um serviço com escopo
     services.AddScoped<IRelatorios, Relatorios>();
+    
 }
 
 app.UseHttpsRedirection();
