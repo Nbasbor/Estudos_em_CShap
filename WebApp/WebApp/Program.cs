@@ -16,7 +16,7 @@ if (!app.Environment.IsDevelopment())
 }
 IWebHost host = new WebHostBuilder()
     .UseKestrel()//Método Http
-    .UseStartup<Startup>()
+    .UseStartup<Startup>()//Classe de inicialização do servidor web
     .Build(); // cria objeto de hospedagem
 host.Run(); //Deixa a hospedagem diponivel
 
