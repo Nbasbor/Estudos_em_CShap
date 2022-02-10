@@ -36,10 +36,10 @@ namespace WebApp.Models
                     };
                     switch (infoEstudo[0])
                     {
-                        case "para-ler":
+                        case "para-estudar":
                             arrayParaEstudar.Add(estudo);
                             break;
-                        case "lendo":
+                        case "estudando":
                             arrayEstudando.Add(estudo);
                             break;
                         default:
@@ -69,5 +69,5 @@ namespace WebApp.Models
         }
 
 
-    }
+    }   
 }
