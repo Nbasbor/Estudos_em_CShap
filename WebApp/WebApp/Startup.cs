@@ -4,8 +4,23 @@ namespace WebApp
 {
     public class Startup
     {
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddRouting();
+        }
         public void Configure(IApplicationBuilder app)
         {               //Request => response é configurada no IAplicationBuilder ( Request pipeline)
+
+            //criar coleção de objetos que representam rotas 
+            var builder = new RouteBuilder(app);
+            builder.MapRoute("/Estudos/ParaEstudar", EstudosParaEstudar);//cria cada rota
+            builder.MapRoute("/Estudos/Estudando", EstudosEstudando);
+            
+            //controi as rotas
+            var rotas = builder.Build();
+
+            app.UseRouter(rotas);
+
             app.Run(Roteamento); 
         }
         public Task Roteamento(HttpContext contexto)
