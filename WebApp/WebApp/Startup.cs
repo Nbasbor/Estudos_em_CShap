@@ -21,7 +21,7 @@ namespace WebApp
 
             app.UseRouter(rotas);
 
-            app.Run(Roteamento); 
+           // app.Run(Roteamento); 
         }
         public Task Roteamento(HttpContext contexto)
         {
