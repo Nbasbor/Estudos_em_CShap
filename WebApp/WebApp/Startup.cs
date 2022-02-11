@@ -16,7 +16,7 @@ namespace WebApp
             builder.MapRoute("Estudos/ParaEstudar", EstudosParaEstudar);//cria cada rota
             builder.MapRoute("Estudos/Estudando", EstudosEstudando);
             builder.MapRoute("Cadastro/NovoEstudo/{nome}/{tipo}", NovoEstudoParaEstudar);
-            builder.MapRoute("Estudos/Detalhes/{id}", ExibindoDetalhes);
+            builder.MapRoute("Estudos/Detalhes/{id:int}", ExibindoDetalhes); //:int é a restrição para o tipo 
 
             //Rotas com Template Cadastro/NovoEstudo/{nome}/{tipo}
             
