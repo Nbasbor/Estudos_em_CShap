@@ -16,6 +16,7 @@ namespace WebApp
             builder.MapRoute("Estudos/ParaEstudar", EstudosParaEstudar);//cria cada rota
             builder.MapRoute("Estudos/Estudando", EstudosEstudando);
             builder.MapRoute("Cadastro/NovoEstudo/{nome}/{tipo}", NovoEstudoParaEstudar);
+            builder.MapRoute("Estudos/Detalhes/{id}", ExibindoDetalhes);
 
             //Rotas com Template Cadastro/NovoEstudo/{nome}/{tipo}
             
@@ -27,9 +28,27 @@ namespace WebApp
            // app.Run(Roteamento); 
         }
 
-        private Task NovoEstudoParaEstudar(HttpContext context)
+        public Task ExibindoDetalhes(HttpContext contexto)
         {
-            throw new NotImplementedException();
+
+            int id = Convert.ToInt32(contexto.GetRouteValue("id"));
+            var repo = new EstudoRepositorioCVS();
+            var estudo = repo.todos.First(e => e.Id == id); //Linq
+            return contexto.Response.WriteAsync(estudo.Detalhes());
+
+        }
+
+        public Task NovoEstudoParaEstudar(HttpContext contexto)
+        {
+            var estudo = new Estudo()//Inicializa estudo para pegar valores de nome e tipo
+            {
+                Nome = Convert.ToString(contexto.GetRouteValue("nome")),
+                Tipo = contexto.GetRouteValue("autor").ToString()
+
+            };
+            var repo = new EstudoRepositorioCVS();
+            repo.Incluir(estudo);
+            return contexto.Response.WriteAsync("Estudo adicionado com sucesso");
         }
 
         public Task Roteamento(HttpContext contexto)
