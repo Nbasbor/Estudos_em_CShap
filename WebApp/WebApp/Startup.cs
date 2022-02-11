@@ -13,8 +13,11 @@ namespace WebApp
 
             //criar coleção de objetos que representam rotas 
             var builder = new RouteBuilder(app);
-            builder.MapRoute("/Estudos/ParaEstudar", EstudosParaEstudar);//cria cada rota
-            builder.MapRoute("/Estudos/Estudando", EstudosEstudando);
+            builder.MapRoute("Estudos/ParaEstudar", EstudosParaEstudar);//cria cada rota
+            builder.MapRoute("Estudos/Estudando", EstudosEstudando);
+            builder.MapRoute("Cadastro/NovoEstudo/{nome}/{tipo}", NovoEstudoParaEstudar);
+
+            //Rotas com Template Cadastro/NovoEstudo/{nome}/{tipo}
             
             //controi as rotas
             var rotas = builder.Build();
@@ -23,6 +26,12 @@ namespace WebApp
 
            // app.Run(Roteamento); 
         }
+
+        private Task NovoEstudoParaEstudar(HttpContext context)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task Roteamento(HttpContext contexto)
         {
             //Estudos/ParaEstudar
