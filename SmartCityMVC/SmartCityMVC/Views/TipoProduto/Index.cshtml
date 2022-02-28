@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<SmartCityMVC.Models.TipoProduto>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tipo de Produto</title>
+</head>
+<body>
+    <h1>Tipo de Produto</h1>
+    <p>
+        <!-- uso de TagHelpers para definir o Controller e a Action -->
+        <a asp-controller="TipoProduto" asp-action="Cadastrar">Novo Tipo</a>
+    </p>
+    <table class="table" border="1">
+        <tr>
+            <th>Id</th>
+            <th>Descrição</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <label>@item.Id</label>
+                </td>
+                <td>
+                    <label>@item.Descricao</label>
+                </td>
+                <td>
+
+                    <!-- asp-route-id é usado para informar o Id do Item selecionado. -->
+                    <a asp-controller="TipoProduto" 
+                       asp-action="Editar" 
+                       asp-route-id="@item.Id">Editar</a>
+
+                    <a asp-controller="TipoProduto" 
+                       asp-action="Consultar" 
+                       asp-route-id="@item.Id">Consultar</a>
+
+                    <a asp-controller="TipoProduto" 
+                       asp-action="Excluir" 
+                       asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
